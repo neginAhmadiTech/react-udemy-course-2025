@@ -1,8 +1,7 @@
 # 🚀 React Developer Journey – Udemy Course Progress
 
-Welcome to my personal implementation and learning log for the Udemy course:
-**[React - The Complete Guide 2025 (incl. React Router & Redux)](https://www.udemy.com/course/react-the-complete-guide-incl-redux/?couponCode=ST7MT290425G4)**  
-by **Maximilian Schwarzmüller**.
+Welcome to my personal implementation and learning log for the Udemy course:  
+**[React - The Complete Guide 2025 (incl. React Router & Redux)](https://www.udemy.com/course/react-the-complete-guide-incl-redux/?couponCode=ST7MT290425G4)** by **Maximilian Schwarzmüller**.
 
 This repository documents my learning progress, hands-on solutions, and personal improvements as I deepen my expertise in React.js and modern front-end development.
 
