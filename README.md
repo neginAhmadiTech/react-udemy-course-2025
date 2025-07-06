@@ -1,6 +1,6 @@
 # 🚀 React Developer Journey – Udemy Course Progress
 
-Welcome to my personal fork and exercise log from the Udemy course:  
+Welcome to my personal implementation and learning log for the Udemy course:
 **[React - The Complete Guide 2025 (incl. React Router & Redux)](https://www.udemy.com/course/react-the-complete-guide-incl-redux/?couponCode=ST7MT290425G4)**  
 by **Maximilian Schwarzmüller**.
 
@@ -84,4 +84,4 @@ I’ve also added Markdown `(.md)` notes in certain sections to document key con
 
 ---
 
-💡 If you're also learning React or want to collaborate, feel free to fork this repo, open issues, or reach out!
+💡 If you're on a similar learning path or want to collaborate, feel free to fork this repo, contribute, or reach out!
