@@ -5,7 +5,7 @@ Welcome to my personal implementation and learning log for the Udemy course:
 
 This repository documents my learning progress, hands-on solutions, and personal improvements as I deepen my expertise in React.js and modern front-end development.
 
----
+<br><br><br>
 
 ## 🎯 Why This Repository?
 
@@ -18,7 +18,7 @@ I'm building this repo to:
 
 This is **not just a copy** of the course — I actively work on each section, improve the code, and document what I’ve learned.
 
----
+<br><br><br>
 
 ## 🧾 Notes on Original Code
 
@@ -27,9 +27,11 @@ I’ve also added Markdown `(.md)` notes in certain sections to document key con
 
 **Disclaimer:** No direct instructor solutions are shared here. Any original code is marked clearly and remains unchanged unless modified by me for learning.
 
----
+<br><br><br>
 
 ## 📅 Progress Checklist
+
+I will update this progress as I complete each section of the course, implement exercises, and add personal notes.
 
 ✅ – Fully implemented or customized  
 📦 – Original code (unmodified, kept for reference)  
@@ -83,4 +85,4 @@ I’ve also added Markdown `(.md)` notes in certain sections to document key con
 
 ---
 
-💡 If you're on a similar learning path or want to collaborate, feel free to fork this repo, contribute, or reach out!
+💡 _If you're on a similar learning path or want to collaborate, feel free to fork this repo, contribute, or reach out!_
