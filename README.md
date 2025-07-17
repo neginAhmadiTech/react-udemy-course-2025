@@ -42,7 +42,7 @@ I will update this progress as I complete each section of the course, implement 
 - [x] **Section 2:** JavaScript Refresher 📦
 - [x] **Section 3:** React Essentials - Components, JSX, Props, State & More 📦🗒️
 - [x] **Section 4:** React Essentials - Deep Dive 📦🗒️
-- [ ] **Section 5:** React Essentials - Practice Project
+- [x] **Section 5:** React Essentials - Practice Project
 - [ ] **Section 6:** Styling React Components
 - [ ] **Section 7:** Debugging React Apps
 - [ ] **Section 8:** Working with Refs & Portals
