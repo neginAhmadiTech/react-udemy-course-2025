@@ -1,6 +1,7 @@
 import { useState } from "react";
 import UserInput from "./components/UserInput";
 import { calculateInvestmentResults, formatter } from "./util/investment";
+import ResultTable from "./components/ResultTable";
 
 function App() {
   const [investmentValues, setInvestmentValues] = useState({
@@ -23,12 +24,11 @@ function App() {
   // );
 
   function handleChange(key, value) {
-    setInvestmentValues((prevValues) => {
-      return {
-        ...prevValues,
-        [key]: Number(value),
-      };
-    });
+    const updatedValues = {
+      ...investmentValues,
+      [key]: Number(value),
+    };
+
     setInvestmentValues(updatedValues);
     setInvestmentResults(calculateInvestmentResults(updatedValues));
   }
@@ -66,7 +66,8 @@ function App() {
         </div>
       </div>
 
-      <table id="result">
+      <ResultTable investmentResults={investmentResults} />
+      {/* <table id="result">
         <thead>
           <tr>
             <td>Year</td>
@@ -91,6 +92,7 @@ function App() {
               </td>
               <td className="center">
                 {formatter.format(
+                  // investmentResult.annualInvestment
                   index === 0
                     ? investmentValues.initialInvestment +
                         investmentResult.annualInvestment
@@ -100,7 +102,7 @@ function App() {
             </tr>
           ))}
         </tbody>
-      </table>
+      </table> */}
     </>
   );
 }
