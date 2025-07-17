@@ -1,6 +1,38 @@
+import { useState } from "react";
 import UserInput from "./components/UserInput";
+import { calculateInvestmentResults, formatter } from "./util/investment";
 
 function App() {
+  const [investmentValues, setInvestmentValues] = useState({
+    initialInvestment: 10000,
+    annualInvestment: 1200,
+    expectedReturn: 6,
+    duration: 10,
+  });
+  const [investmentResults, setInvestmentResults] = useState(
+    calculateInvestmentResults(investmentValues)
+  );
+  console.log(investmentResults);
+  // console.log(
+  //   calculateInvestmentResults({
+  //     initialInvestment: 10000,
+  //     annualInvestment: 1200,
+  //     expectedReturn: 6,
+  //     duration: 10,
+  //   })
+  // );
+
+  function handleChange(key, value) {
+    setInvestmentValues((prevValues) => {
+      return {
+        ...prevValues,
+        [key]: Number(value),
+      };
+    });
+    setInvestmentValues(updatedValues);
+    setInvestmentResults(calculateInvestmentResults(updatedValues));
+  }
+
   return (
     <>
       <div id="user-input">
@@ -8,19 +40,67 @@ function App() {
           <UserInput
             label="initial investment"
             type="number"
-            defaultValue={10000}
+            value={investmentValues.initialInvestment}
+            onChange={(e) => handleChange("initialInvestment", e.target.value)}
           />
           <UserInput
-            label="anual investment"
+            label="annual investment"
             type="number"
-            defaultValue={1200}
+            value={investmentValues.annualInvestment}
+            onChange={(e) => handleChange("annualInvestment", e.target.value)}
           />
         </div>
         <div className="input-group">
-          <UserInput label="expected return" type="number" defaultValue={6} />
-          <UserInput label="duration" type="number" defaultValue={10} />
+          <UserInput
+            label="expected return"
+            type="number"
+            value={investmentValues.expectedReturn}
+            onChange={(e) => handleChange("expectedReturn", e.target.value)}
+          />
+          <UserInput
+            label="duration"
+            type="number"
+            value={investmentValues.duration}
+            onChange={(e) => handleChange("duration", e.target.value)}
+          />
         </div>
       </div>
+
+      <table id="result">
+        <thead>
+          <tr>
+            <td>Year</td>
+            <td>Investment Value</td>
+            <td>Interest(Year)</td>
+            <td>Total Interest</td>
+            <td>Invested Capital</td>
+          </tr>
+        </thead>
+        <tbody>
+          {investmentResults.map((investmentResult, index) => (
+            <tr key={investmentResult.year}>
+              <td className="center">{investmentResult.year}</td>
+              <td className="center">
+                {formatter.format(investmentResult.valueEndOfYear)}
+              </td>
+              <td className="center">
+                {formatter.format(investmentResult.interest)}
+              </td>
+              <td className="center">
+                {formatter.format(investmentResult.annualInvestment)}
+              </td>
+              <td className="center">
+                {formatter.format(
+                  index === 0
+                    ? investmentValues.initialInvestment +
+                        investmentResult.annualInvestment
+                    : investmentResults[index]
+                )}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </>
   );
 }
