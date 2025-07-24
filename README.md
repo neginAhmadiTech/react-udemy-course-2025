@@ -44,7 +44,7 @@ I will update this progress as I complete each section of the course, implement 
 - [x] **Section 4:** React Essentials - Deep Dive 📦🗒️
 - [x] **Section 5:** React Essentials - Practice Project
 - [x] **Section 6:** Styling React Components
-- [ ] **Section 7:** Debugging React Apps
+- [x] **Section 7:** Debugging React Apps
 - [ ] **Section 8:** Working with Refs & Portals
 - [ ] **Section 9:** Practice Project Project Management App (with Components, State, Refs & More)
 - [ ] **Section 10:** React's Context API & useReducer - Advanced State Management
